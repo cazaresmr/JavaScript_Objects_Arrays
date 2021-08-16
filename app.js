@@ -14,15 +14,23 @@ function arraySum(numbers) {
 
 console.log(arraySum(numbers))
 
+/*
+let withReduce = numbers.reduce((sum, value) => {
+  return sum += value;
+});
+
+console.log(withReduce);
+*/
+
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n")
 
-const book = {}
-book.title = "1984"
-book.pages = 304
-book.readCount = 3
+const book = {};
+book.title = "1984";
+book.pages = 304;
+book.readCount = 3;
 book.info = function () {
-	let statement = `I have read all ${book.pages} pages of George Orwell's "${book.title}" at least ${book.readCount} times.`
-	console.log(statement)
+	return `I have read all ${this.pages} pages of George Orwell's "${this.title}" at least ${this.readCount} times.`
 }
-console.log(book.info())
+
+book.info();
